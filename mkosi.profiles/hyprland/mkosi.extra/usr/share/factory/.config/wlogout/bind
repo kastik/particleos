@@ -1,0 +1,40 @@
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "Shutdown (S)",
+    "keybind" : "s"
+}
+
+{
+    "label" : "logout",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "Logout (E)",
+    "keybind" : "e"
+}
+
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernate (H)",
+    "keybind" : "h"
+}
+
+{
+    "label" : "lock",
+    "action" : "loginctl lock-session",
+    "text" : "Lock (L)",
+    "keybind" : "l"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot (R)",
+    "keybind" : "r"
+}
+
+{
+    "label" : "windows",
+    "action" : "systemctl reboot --boot-loader-entry=auto-windows",
+    "text" : " Reboot into Windows (W) ",
+    "keybind" : "w"
+}

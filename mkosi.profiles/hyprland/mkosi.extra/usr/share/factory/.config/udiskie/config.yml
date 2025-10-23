@@ -1,0 +1,10 @@
+program_options:
+  tray: auto              # Show tray icon
+  notify: true           # Enable notifications
+  menu: flat
+  automount: true        # Enable automatic mounting
+  file_manager: yazi # Program to open mounted directories
+
+notifications:
+  timeout: 1.5           # Notification timeout in seconds
+  device_mounted: 5      # Show mount notifications for 5
