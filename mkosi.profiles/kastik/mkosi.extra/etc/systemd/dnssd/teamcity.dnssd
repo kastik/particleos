@@ -1,0 +1,5 @@
+[Service]
+Name=TeamCity
+Type=_http._tcp
+Port=8111
+TxtText=test

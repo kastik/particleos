@@ -1,0 +1,14 @@
+{
+    "/boot/efi/EFI/Linux/arch-linux.efi": {
+        "file": "/boot/efi/EFI/Linux/arch-linux.efi",
+        "output_file": "/boot/efi/EFI/Linux/arch-linux.efi"
+    },
+    "/boot/efi/EFI/systemd/systemd-bootx64.efi": {
+        "file": "/boot/efi/EFI/systemd/systemd-bootx64.efi",
+        "output_file": "/boot/efi/EFI/systemd/systemd-bootx64.efi"
+    },
+    "/usr/lib/systemd/boot/efi/systemd-bootx64.efi": {
+        "file": "/usr/lib/systemd/boot/efi/systemd-bootx64.efi",
+        "output_file": "/usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed"
+    }
+}

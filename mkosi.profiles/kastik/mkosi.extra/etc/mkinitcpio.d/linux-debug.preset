@@ -1,0 +1,11 @@
+ALL_kver="/boot/vmlinuz-linux"
+ALL_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
+ALL_config="/etc/mkinitcpio.conf.d/debug.conf"
+
+PRESETS=('verity' 'noverity')
+
+verity_uki="/boot/efi/EFI/Linux/linux-verity-debug.efi"
+verity_options="--cmdline /etc/kernel/cmdline-debug-verity"
+
+noverity_uki="/boot/efi/EFI/Linux/linux-non-verity.efi"
+noverity_options="--cmdline /etc/kernel/cmdline-debug-non-verity"

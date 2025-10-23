@@ -1,0 +1,17 @@
+[Match]
+Name=wlp1s0
+
+[Link]
+Multicast=yes
+
+[Network]
+MulticastDNS=yes
+DHCP=yes
+IgnoreCarrierLoss=3s
+LLMNR=true
+IPv4Forwarding=yes
+IPv6Forwarding=yes
+
+[DHCPServer]
+PoolOffset=100
+PoolSize=20

@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+
+enable apparmor.service
+#enable auditd.service
+enable bluetooth.service
+enable firewalld.service
+enable iwd.service
+enable systemd-networkd.service
