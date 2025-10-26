@@ -18,3 +18,6 @@ later:
 • in live mode: mark root block device read-only on block level
 • pkcs7 for image downloads, rather than gpg
 • https boot
+
+My TODO
+Integrate Aur package build in sandbox for better more reproducible builds
