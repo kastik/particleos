@@ -1,8 +1,8 @@
 # Maintainer: system64 <system64fumo@tuta.io>
 
 pkgname=syshud
-pkgver=9.9.9
-pkgrel=9
+pkgver=2025.10.25
+pkgrel=1
 pkgdesc="Simple heads up display"
 arch=('aarch64' 'riscv64' 'x86_64')
 url="https://github.com/System64fumo/syshud"
