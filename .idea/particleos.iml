@@ -6,9 +6,6 @@
       <excludeFolder url="file://$MODULE_DIR$/mkosi.cache" />
       <excludeFolder url="file://$MODULE_DIR$/mkosi.output" />
       <excludeFolder url="file://$MODULE_DIR$/mkosi.tools" />
-      <excludeFolder url="file://$MODULE_DIR$/mkosi.packages" />
-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/.build" />
       <excludeFolder url="file://$MODULE_DIR$/mkosi.pkgcache" />
     </content>
     <orderEntry type="inheritedJdk" />

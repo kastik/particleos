@@ -10,3 +10,4 @@ mkosi.crt
 mkosi.version
 .mkosi-private
 /mkosi.packages/
+/mkosi.pkgcache/*
