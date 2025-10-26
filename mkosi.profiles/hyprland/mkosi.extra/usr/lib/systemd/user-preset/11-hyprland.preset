@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+
+enable hypridle.service
+enable swaync.service
+enable waybar.service
+enable wireplumber.service
+enable xdg-user-dirs.service
+#enable systemd-tmpfiles-setup.service
+enable xdg-user-dirs.service
