@@ -68,31 +68,31 @@ prepare() {
 package() {
     tar -xzf data.tar.gz --no-same-owner -C "${pkgdir}"
 
-    # Enable spotify to open URLs from the webapp
+    # Enable Spotify to open URLs from the webapp
     sed -i 's/^Exec=.*/Exec=spotify --uri=%u/' "${pkgdir}/usr/share/spotify/spotify.desktop"
 
-    install -Dm 644 "${pkgdir}/usr/share/spotify/spotify.desktop" "${pkgdir}/usr/share/applications/spotify.desktop"
-    install -Dm 644 "${pkgdir}/usr/share/spotify/icons/spotify-linux-512.png" "${pkgdir}/usr/share/pixmaps/spotify-client.png"
+    # Fix Exec path in desktop entry (no /opt anymore)
+    sed -i 's|/opt/spotify|/usr/share/spotify|g' "${pkgdir}/usr/share/spotify/spotify.desktop"
+
+    # Install .desktop file and icons
+    install -Dm644 "${pkgdir}/usr/share/spotify/spotify.desktop" "${pkgdir}/usr/share/applications/spotify.desktop"
+    install -Dm644 "${pkgdir}/usr/share/spotify/icons/spotify-linux-512.png" "${pkgdir}/usr/share/pixmaps/spotify-client.png"
 
     for size in 22 24 32 48 64 128 256 512; do
-        install -Dm 644 "${pkgdir}/usr/share/spotify/icons/spotify-linux-${size}.png" \
+        install -Dm644 "${pkgdir}/usr/share/spotify/icons/spotify-linux-${size}.png" \
             "${pkgdir}/usr/share/icons/hicolor/${size}x${size}/apps/spotify.png"
     done
 
-    # Move spotify binary to its proper location
-    mkdir -p "${pkgdir}/opt/spotify"
-    mv "${pkgdir}/usr/share/spotify" "${pkgdir}/opt/"
+    # Copy launch script (wrapper) to /usr/bin
+    sed -i 's|/opt/spotify|/usr/share/spotify|g' spotify.sh
+    install -Dm755 spotify.sh "${pkgdir}/usr/bin/spotify"
 
-    # Copy launch script which allows the use of custom flags
-    install -Dm 755 spotify.sh "${pkgdir}/usr/bin/spotify"
+    # KDE protocol handler
+    install -Dm644 spotify.protocol "${pkgdir}/usr/share/kservices5/spotify.protocol"
 
-    # Copy protocol file for KDE
-    install -Dm 644 spotify.protocol "${pkgdir}/usr/share/kservices5/spotify.protocol"
+    # License
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
-    # Install license
-    # https://www.spotify.com/legal/end-user-agreement
-    install -Dm 644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-
-    # Fix permissions
+    # Clean permissions
     chmod -R go-w "${pkgdir}"
 }
