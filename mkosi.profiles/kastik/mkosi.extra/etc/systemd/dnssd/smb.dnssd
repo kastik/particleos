@@ -1,0 +1,13 @@
+[Service]
+Name=Samba
+Type=_smb._tcp
+Port=445
+TxtText=test
+
+
+[Service]
+Name=Samba Netbios
+Type=_smb._tcp
+Port=139
+TxtText=test
+
