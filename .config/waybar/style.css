@@ -1,0 +1,331 @@
+@import "mocha.css";
+
+
+
+* {
+
+    font-family: JetBrainsMono Nerd Font;
+
+    font-size: 16px;
+
+    min-height: 0;
+
+}
+
+
+
+#waybar {
+
+    background: transparent;
+
+    color: @text;
+
+    margin: 3px 3px;
+
+}
+
+#taskbar {
+
+    border-radius: 1rem;
+
+    background-color: @surface0;
+
+    margin: 3px 3px 3px 1rem;
+
+}
+
+
+
+#workspaces {
+
+    border-radius: 1rem;
+
+    background-color: @base;
+
+    margin: 3px 3px 3px 1rem;
+
+}
+
+
+
+#workspaces button {
+
+    color: @lavender;
+
+    border-radius: 1rem;
+
+    padding: 0.4rem;
+
+}
+
+
+
+#workspaces button.active {
+
+    color: @sky;
+
+    border-radius: 1rem;
+
+}
+
+
+
+#workspaces button:hover {
+
+    color: @sapphire;
+
+    border-radius: 1rem;
+
+}
+
+
+
+#custom-dismiss_notifications {
+
+    color: @red;
+
+}
+
+#custom-darkmode {
+    color: @teal
+}
+
+
+
+#custom-notification,
+
+#custom-music,
+
+#tray,
+
+#backlight,
+
+#clock,
+
+#battery,
+
+#wireplumber,
+
+#custom-lock,
+
+#custom-power,
+
+#network,
+
+#language,
+
+#taskbar,
+
+#power-profiles-daemon,
+
+#custom-darkmode,
+
+#bluetooth {
+
+    background-color: @base;
+
+    padding: 0.5rem 1rem;
+
+    margin: 3px 0;
+
+}
+
+
+
+
+
+
+
+
+
+#bluetooth {
+
+    color: @mauve
+
+}
+
+
+
+#network {
+
+    color: @maroon
+
+}
+
+
+
+
+
+#power-profiles-daemon{
+
+    border-radius: 1rem 0 0 1rem;
+
+    color: @rosewater;
+
+}
+
+
+
+#clock {
+
+    color: @peach;
+
+    border-radius: 0rem 0rem 0rem 0rem;
+
+    }
+
+
+
+
+
+#custom-notification {
+
+    border-radius: 0rem 1rem 1rem 0rem;
+
+    margin-right: 1rem;
+
+}
+
+
+
+
+
+#battery {
+
+    color: @green;
+
+}
+
+
+
+#battery.charging {
+
+    color: @green;
+
+}
+
+
+
+#battery.warning:not(.charging) {
+
+    color: @red;
+
+}
+
+
+
+#backlight {
+
+    color: @yellow;
+
+}
+
+
+
+#backlight, #battery {
+
+    border-radius: 0;
+
+}
+
+
+
+#wireplumber {
+
+    color: @pink;
+
+    border-radius: 0;
+
+}
+
+
+
+#custom-music {
+
+    color: @mauve;
+
+    border-radius: 1rem;
+
+}
+
+
+
+
+
+#custom-lock {
+
+    border-radius: 1rem 0 0 1rem;
+
+    color: @yellow;
+
+}
+
+
+
+#custom-power {
+
+    margin-right: 1rem;
+
+    border-radius: 0 1rem 1rem 0;
+
+    color: @red;
+
+}
+
+
+
+#tray {
+
+    border-radius: 1rem 1rem 1rem 1rem;
+
+    margin-right: 1rem;
+
+}
+
+
+
+#language {
+
+    color: @flamingo
+
+}
+
+
+
+#custom-notification {
+
+    border-radius: 0rem 1rem 1rem 0rem;
+
+    margin-right: 1rem;
+
+}
+
+
+
+#clock {
+
+    border-radius: 0rem;
+
+}
+
+
+
+/* When on the second monitor (not eDP-1), modify styles */
+
+window:not(.eDP-1) #custom-notification {
+
+    border-radius: 0;
+
+    margin-right: 0;
+
+}
+
+
+
+window:not(.eDP-1) #clock {
+
+    border-radius: 0rem 1rem 1rem 0rem;
+
+    margin-right: 1rem;
+
+}

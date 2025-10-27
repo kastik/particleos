@@ -1,0 +1,14 @@
+height=40%
+width=20%
+hide_scroll=true
+insensitive=true
+location=center
+matching=contains
+mode=drun
+prompt=...
+line_wrap=word
+single_click=true
+key_expand=Shift_R
+allow_images=true
+allow_markup=true
+sort_order=alphabetical

@@ -1,0 +1,13 @@
+set viminfofile=~/.local/state/vim/viminfo
+set number
+filetype plugin on
+filetype plugin indent on
+syntax enable
+syntax on
+filetype on
+set hlsearch
+set mouse=a
+cmap w!! w !sudo tee > /dev/null %
+set termguicolors
+colorscheme catppuccin_mocha
+set clipboard=unnamedplus

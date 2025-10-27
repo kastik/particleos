@@ -1,0 +1,24 @@
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "Shutdown (S)",
+    "keybind" : "s"
+}
+{
+    "label" : "hibernate",
+    "action" : "systemctl suspend-then-hibernate",
+    "text" : "  Hibernate (H)  ",
+    "keybind" : "h",
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : " Reboot (R) ",
+    "keybind" : "r"
+}
+{
+    "label" : "windows",
+    "action" : "systemctl reboot --boot-loader-entry=auto-windows",
+    "text" : " Reboot into Windows (W) ",
+    "keybind" : "w"
+}
