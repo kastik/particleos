@@ -1,0 +1,242 @@
+[{
+    "layer": "top",
+    "position": "bottom",
+    "output": "eDP-1",
+    "start_hidden": false,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["tray","power-profiles-daemon","hyprland/language","wireplumber","bluetooth", "network","battery", "clock", "custom/notification","custom/lock", "custom/power"],
+
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+"wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
+    },
+    "hyprland/workspaces": {
+        "show-special": true,
+        "format": " {icon} "
+        },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+        },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-gr": "gr",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+        },
+    "wlr/taskbar": {
+        "all-outputs": "false",
+        "format": "{icon}",
+        "icon-size": 20,
+        "icon-theme": "Papirus-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+        },
+    "clock": {
+        "timezone": "Europe/Athens",
+        "format": "{:%H:%M}"
+        },
+    "battery": {
+        "format": "{capacity}%  <span font='Font Awesome 5 Free 11'>{icon}</span> ",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "{capacity}% <span font='Font Awesome 5 Free'></span> ",
+        "format-full":  "Charged <span font='Font Awesome 5 Free'></span> ",
+        "interval": 2,
+        "states": {
+            "warning": 30,
+            "critical": 15
+            },
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "on-click": "brightnessctl -d '*::kbd_backlight' set $(($(brightnessctl -d '*::kbd_backlight' g) == 0 ? 50 : 0)) -q"
+        },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "wlogout -l .config/wlogout/user -b 2",
+        "format": "",
+        },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout -l .config/wlogout/power -b 2",
+        "format": "襤"
+        },
+    "bluetooth": {
+        "format": " {controller_alias}",
+	    "format-connected": " {device_alias}",
+	    "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+	    //"format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+            "on-click": "blueman-manager"
+    },
+    "network": {
+        "interface": "wlp1s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "{ifname}",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty --class impala impala"
+    }
+
+
+},{
+    "layer": "top",
+    "position": "bottom",
+    "output": "DP-1",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["power-profiles-daemon","wireplumber","bluetooth", "network","battery", "clock", "custom/lock", "custom/power"],
+
+"wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
+    },
+    "hyprland/workspaces": {
+        "format": " {icon} "
+        },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+        },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-gr": "gr",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+        },
+    "wlr/taskbar": {
+        "all-outputs": "true",
+        "format": "{icon}",
+        "icon-size": 20,
+        "icon-theme": "Papirus-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+        },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+        },
+    "clock": {
+        "timezone": "Europe/Athens",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d/%m/%Y}",
+        "format": "{:%H:%M}"
+        },
+    "battery": {
+        "format": "{capacity}%  <span font='Font Awesome 5 Free 11'>{icon}</span> ",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "{capacity}% <span font='Font Awesome 5 Free'></span> ",
+        "format-full":  "Charged <span font='Font Awesome 5 Free'></span> ",
+        "interval": 2,
+        "states": {
+            "warning": 30,
+            "critical": 15
+            },
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "on-click": "brightnessctl -d '*::kbd_backlight' set $(($(brightnessctl -d '*::kbd_backlight' g) == 0 ? 50 : 0)) -q"
+        },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "wlogout -l .config/wlogout/user -b2",
+        "format": "",
+        },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout -l .config/wlogout/power -b2",
+        "format": "襤"
+        },
+    "bluetooth": {
+        "format": " {controller_alias}",
+	    "format-connected": " {device_alias}",
+	    "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+	    //"format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+            "on-click": "blueman-manager"
+    },
+    "network": {
+        "interface": "wlp1s0",
+        //"interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "{ifname}", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty --class impala impala"
+    }
+}]
+

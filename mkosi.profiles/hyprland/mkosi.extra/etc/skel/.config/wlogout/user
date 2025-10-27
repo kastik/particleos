@@ -1,0 +1,12 @@
+{
+    "label" : "logout",
+    "action" : "loginctl kill-session self",
+    "text" : "Logout (O)",
+    "keybind" : "o"
+}
+{
+    "label" : "lock",
+    "action" : "loginctl lock-session self",
+    "text" : "  Lock (L)  ",
+    "keybind" : "l",
+}

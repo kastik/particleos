@@ -1,0 +1,21 @@
+alias hypredit='vifm ~/.config/hypr/'
+path+=($XDG_DATA_HOME/android/platform-tools)
+path+=("/opt/Jetbrains/scripts/")
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+export ANDROID_HOME="$XDG_DATA_HOME"/android/sdk
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
+export PSQL_HISTORY="$XDG_STATE_HOME/psql_history"
+export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
+export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
+export GOPATH="$XDG_DATA_HOME"/go
+export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export OUT_DIR=/home/AOSP_OUT
+export PATH="/usr/lib/ccache/bin:/opt/jetbrains/scripts:$PATH"
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+export CCACHE_DIR=~/.cache/ccache
