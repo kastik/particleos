@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/mkosi.output" />
       <excludeFolder url="file://$MODULE_DIR$/mkosi.tools" />
       <excludeFolder url="file://$MODULE_DIR$/mkosi.pkgcache" />
+      <excludeFolder url="file://$MODULE_DIR$/mkosi.packages" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
