@@ -21,3 +21,4 @@ later:
 
 My TODO
 Integrate Aur package build in sandbox for better more reproducible builds
+Add default passwords for luks
